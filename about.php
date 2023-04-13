@@ -55,50 +55,36 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div class="project__wrapper">
-            <div class="project__card">               
-                    <img src="./img/about/unsplash_rN1y-_EV8kEproject1.png" alt="">
-                    <div class="cards__text">
-                        <h4>Frontline Business Solution, Inc.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                    </div>                
-            </div>
-            <div class="project__card">               
-                <img src="./img/about/unsplash_mr4JG4SYOF8.png" alt="">
-                <div class="cards__text">
-                    <h4>Frontline Business Solution, Inc.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                </div>                
-            </div>
-            <div class="project__card">               
-                <img src="./img/about/unsplash_rN1y-_EV8kEproject1.png" alt="">
-                <div class="cards__text">
-                    <h4>Frontline Business Solution, Inc.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                </div>                
-            </div>
-            <div class="project__card">               
-                <img src="./img/about/unsplash_Cys3W7_MXDU.png" alt="">
-                <div class="cards__text">
-                    <h4>Frontline Business Solution, Inc.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                </div>                
-            </div>
-            <div class="project__card">               
-                <img src="./img/about/unsplash_Epw-SqZYeyw.png" alt="">
-                <div class="cards__text">
-                    <h4>Frontline Business Solution, Inc.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                </div>                
-            </div>
-            <div class="project__card">               
-                <img src="./img/about/unsplash_jukKJSr9FcA.png" alt="">
-                <div class="cards__text">
-                    <h4>Frontline Business Solution, Inc.</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque sunt repudiandae modi natus magnam tempora in porro illum explicabo quis.</p>
-                </div>                
-            </div>
+
+        <?php
+            $args = array(
+                'post_type' => 'recentProjectPost',
+                'posts_per_page' => 6,
+            );
+            $newQuery = new WP_Query($args)
+        ?>
+        <?php if($newQuery->have_posts()) : while($newQuery->have_posts()) : $newQuery->the_post(); ?>
+
+        <div class="project__card">               
+        <?php echo get_the_post_thumbnail(); ?>
+            <div class="cards__text">
+                <h4> <?php the_title(); ?></h4>
+                <p><?php the_excerpt(); ?></p>
+            </div>                
+        </div>
+
+        <?php 
+        endwhile;
+        else:
+            echo "no available content";
+        endif;
+            wp_reset_postdAta();
+        ?>
+
         </div>
     </div>
 </section>
+
+<?php include 'contactUs.php'; ?>
 
 <?php get_footer(); ?>

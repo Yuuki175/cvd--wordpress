@@ -410,6 +410,7 @@ transition: 300ms;
 }
 .latest__trend .latest__card img{
     width: 100%;
+    border-radius: 2rem;
 }
 .latest__trend .latest__card .card__text{
     padding: 2rem;
@@ -696,6 +697,11 @@ transition: 300ms;
 }
 .updates .updates__author ul li i{
     margin-right: 1rem;
+
+}
+.updates .updates__author ul li i:not(:first-child) {
+   padding-left: 4rem;
+
 }
 .updates .updates__text h3{
     color: #ffa700;
@@ -743,16 +749,19 @@ transition: 300ms;
 .updates .rp__item{
     display: flex;
     margin-bottom: 4rem;
+    justify-content: space-between;
 }
 .updates .rp__item__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-left: 3rem;
 }
 .updates .rp__item__text h4{
     font-weight: 700;
 }
-.updates .rp__item__text p{
-    margin-top: 3rem;
-}
+
+
 /*-------------------tags--------------------*/
 .updates .updates__tags{
     padding: 9rem 0;
@@ -801,6 +810,7 @@ transition: 300ms;
 .services1 .web{
     display: flex;
     justify-content: space-between;
+    gap: 25rem;
     margin: 0 5rem;
 }
 .services1 .service__text h1{
@@ -837,10 +847,18 @@ transition: 300ms;
     padding: 5rem 0;
     padding-top: 8rem;
 }
-.services2 .graphic{
+
+.services2 .web{
     display: flex;
     justify-content: space-between;
+    gap: 25rem;
     margin: 0 5rem;
+}
+.services2 .service__text{
+    order: 2;
+}
+.services2 img{
+    order: 1;
 }
 .services2 .service__text h1{
     color: #ffa700;
@@ -881,9 +899,10 @@ transition: 300ms;
     padding: 5rem 0;
     padding-top: 8rem;
 }
-.services3 .social{
+.services3 .web{
     display: flex;
     justify-content: space-between;
+    gap: 25rem;
     margin: 0 5rem;
 }
 .services3 .service__text h1{
@@ -936,6 +955,252 @@ transition: 300ms;
         text-align: center;
      }
 }
+
+.contacts{
+    background: #2b2b2b;
+    padding: 18rem 0;
+    border-bottom:2px solid #706f6f;
+    width: 100%;
+    justify-content: center;
+}
+.contacts .contacts__title h1{
+    color: #ffa700;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    margin-bottom: auto;
+}
+.contacts .contacts__wrapper .contacts__page__left p{
+    color: #ffffff;
+}
+.contacts .contacts__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15rem;
+    border-bottom: #706f6f;
+}
+.contacts .contacts__page__left{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.contacts .contacts__page__left p{
+    font-size: 2rem;
+    margin: 2.5rem 0 5rem 0;
+
+}
+
+.contacts .contacts__page__left ul{
+    color: #ffffff;
+    max-width: 50rem;
+    font-size: 2rem;
+    margin-left: 5rem;
+
+}
+
+.contacts .contacts__page__left ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.contacts .contacts__page__left ul li h6{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.contacts .contacts__page__left ul li i{
+    color: #ffa700;
+    margin-right: 3rem;
+}
+
+.contacts .contacts__page__left .contacts__page__itemL ul li a i{
+    color: #ffffff;
+    margin-left: -1rem;
+}
+
+.contacts .contacts__page__left .contacts__page__itemL ul{
+    color: #ffffff;
+    margin-left: 6rem;
+    margin-top: 3rem;
+}
+
+.contacts .contacts__page__left .contacts__page__itemL ul{
+    display: flex;
+}
+
+
+.contacts .contacts__page__right .contacts__page__itemR a{
+    margin-top: .5rem;
+    margin-left: 45.4rem;
+}
+.wpcf7 form .wpcf7-response-output{
+    color: #ffffff;
+    font-style: italic;
+}
+
+@media screen and (max-width: 500px){
+    .contacts{
+        display: block;
+        justify-content: center;
+        padding: 5rem 0;
+    }
+
+    .contacts .contacts__title h1{
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 3rem;
+    }
+
+    .contacts .contacts__page__left p{
+        font-size: 1.5rem;
+    }
+
+    .contacts .contacts__page__left ul li h6{
+        font-size: 1.5rem;
+    }
+
+    .contacts .contacts__page__left .contacts__page__itemL ul li a i{
+        display: block;
+        margin-top: 3rem;
+    }
+
+    .contacts .contacts__page__left ul li{
+        display: flex;
+        align-items: center;
+        margin-bottom: -6rem;
+        margin-top: -3rem;
+    }
+
+    .contacts .contacts__wrapper{
+        display: block;
+        grid-template-columns: 2.5fr 1.5fr;
+        grid-gap: 3rem;
+    }
+
+    .contacts .contacts__page__left .contacts__page__itemL{
+        display: block;
+        margin-bottom: 5rem;
+    }
+
+    .contacts .contacts__page__left .contacts__page__itemL ul{
+        margin-bottom: 3rem;
+    }
+
+    .contacts .contacts__page__right .contacts__page__itemR a{
+        margin-top: .5rem;
+        margin-left: 27rem;
+    }
+}
+
+.theContent{
+    padding-top: 15rem;
+}
+.theContent .info{
+    padding: 4rem 2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+.theContent .lead{
+    border-bottom: 2px solid gray;
+}
+.theContent h1{
+    font-size: 7rem;
+    text-align: center;
+    color: #ffa700;
+    padding-top: 2rem;
+    font-weight: 600;
+}
+.theContent .lead p{
+    font-size: 2.4rem;
+    text-align: center;
+    color: black;
+    max-width: 72%;
+    margin: 1rem auto;
+
+}
+.theContent .info .author{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.theContent .info .author img{
+/* max-width: 200rem; */
+width: 100%;
+height: 100%;
+border: 2px solid black;  
+}
+.theContent .info .author ul i{
+    padding-right: 1rem;
+    margin: 1rem 0 3rem 0;
+}
+.theContent .info .author ul i:not(:first-child){
+    padding-left: 3rem;
+}
+
+.theContent small{
+font-size: 1.5rem;
+display: inline-block;
+right: 0;
+}
+
+.theContent .details p{
+text-align: justify;
+font-size: 2rem;
+padding-bottom: 3rem;
+line-height: 1.4em;
+
+
+}
+
+.theContent .details p::first-letter{
+font-size: 5.8rem;
+font-weight: 600;
+float: left;
+font-family: 'Chopin Script', sans-serif;
+padding-right: .8rem;
+line-height: 96.5%;
+}
+
+
+
+.theContent .content__sidebar{
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-gap: 2rem;
+margin: 5rem 0;
+padding: 2rem;
+background-color: #f3e2d0;
+}
+
+
+
+
+.theContent .content__info img{
+width: 70%;
+height: 100%;
+transition: .5s ease;
+justify-content: center;
+padding: 0 10rem;
+
+}
+/* .theContent .content__info img:hover{
+transform: scale(1.1);
+} */
+
+.theContent .content__details{
+padding: 1rem;
+padding: 0 10rem;
+}
+
+.theContent .content__name{
+display: flex;
+justify-content: space-between;
+align-items: end;
+padding-bottom: 1rem;
+}
+
+
 /*-------------------REPEATABLE PATTERN--------------------*/
 .btn{
     padding: 1.2rem 1.5rem;

@@ -14,7 +14,7 @@
             <div class="banner__text">
                 <h1><?php echo get_field("banner_title") ?></h1>
                 <p><?php echo get_field("banner_paragraph") ?></p>
-                <a id="banner__btn"  href="<?php the_permalink();?>" class="btn bg--yellow"><?php echo get_field("banner_link") ?></a>
+                <a id="banner__btn"  href="<?php echo the_permalink();?>" class="btn bg--yellow"><?php echo get_field("banner_link") ?></a>
             </div>
             <?php
                 $image = get_field('banner_image');
@@ -43,7 +43,7 @@
                 <i class="<?php echo get_field("text_icon"); ?>"></i>
                 <h4><?php the_title(); ?></h4>
                 <p><?php the_excerpt(); ?></p>
-                <a class="btn bg--yellow"href="<?php the_permalink();?>"><?php echo get_field("services_link"); ?></a>
+                <a class="btn bg--yellow"href="<?php echo site_url("services");?>"><?php echo get_field("services_link"); ?></a>
             </div>
 
         <?php 
@@ -102,7 +102,7 @@
                     <div class="card__text">
                     <h2><?php the_title(); ?></h2>
                     <p><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink();?>"><?php echo get_field("latest_link"); ?></a>
+                    <a href="<?php echo the_permalink();?>"><?php echo get_field("latest_link"); ?></a>
                     </div>
                 </div>
                 
@@ -117,15 +117,7 @@
     </div>
 </section>
 
-<section class="contact">
-        <div class="container">
-            <div class="contact__wrapper">
-                <h2><?php echo get_field("contact_main") ?></h2>
-                <p><?php echo get_field("contact_submain") ?></p>
-                <a class="btn bg--dark" href=""><?php echo get_field("contact_link") ?></a>
-            </div>
-        </div>
-</section>
+<?php include 'contactUs.php'; ?>
 
 
 <?php get_footer(); ?>

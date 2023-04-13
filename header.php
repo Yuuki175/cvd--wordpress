@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creative Visual Design - Home</title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.cdnfonts.com/css/chopin-script" rel="stylesheet">
     <script src="https://kit.fontawesome.com/25db722303.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <div class="branding">
                 <img src="<?php echo get_template_directory_uri() ?>./img/home/Ellipse 1.png" alt="">
                 <h2>Creative <span>Visual</span> Design</h2>
-            </div>           
+            </div>
             <div class="header__nav">
                 <ul>
                     <?php wp_menu_li(); ?>
